@@ -43,7 +43,7 @@ export default function Home() {
           <h1>Pine Bluff House</h1>
         </div>
         <div className="header-stats" aria-label="Walkthrough contents">
-          <span><strong>50</strong> interior views</span>
+          <span><strong>{viewpoints.length}</strong> interior views</span>
           <span><strong>32</strong> property details</span>
         </div>
       </header>

@@ -24,7 +24,6 @@ ROOMS = {
 }
 
 LOOSE_FILES = {
-    "IMG_20260908_152705993.jpg": "hall-linen-01.jpg",
     "IMG_20260908_153829424.jpg": "systems-01.jpg",
     "IMG_20260908_153901881.jpg": "systems-02.jpg",
     "IMG_20260908_154037450.jpg": "systems-03.jpg",

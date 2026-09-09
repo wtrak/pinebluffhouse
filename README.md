@@ -4,7 +4,7 @@ An interactive, room-by-room photo map built from a measured floor plan and phot
 
 ## What is included
 
-- 50 interior photographs mapped to camera positions and approximate viewing directions
+- 49 interior photographs mapped to camera positions and approximate viewing directions
 - Room filters, plan markers, thumbnail navigation, and full-screen viewing
 - Separate exterior, attic/roof, and utilities reference albums
 - Responsive desktop and mobile layouts
