@@ -12,6 +12,10 @@ An interactive, room-by-room photo map built from a measured floor plan and phot
 
 The map is a planning reference based on the supplied floor plan and overlapping photographs. It is not a survey or architectural drawing.
 
+## Public walkthrough
+
+The shareable GitHub Pages version is published at <https://wtrak.github.io/pinebluffhouse/>.
+
 ## Run locally
 
 Requires Node.js 22.13 or later.
@@ -25,4 +29,10 @@ Create a production build with:
 
 ```bash
 npm run build
+```
+
+Build the static GitHub Pages version with:
+
+```bash
+npm run build:pages
 ```

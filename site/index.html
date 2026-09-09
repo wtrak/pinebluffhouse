@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore the Pine Bluff House through an interactive floor plan with mapped room photographs." />
+    <meta property="og:title" content="Pine Bluff House — Interactive Photo Walkthrough" />
+    <meta property="og:description" content="A room-by-room visual walkthrough organized around the measured floor plan." />
+    <meta property="og:image" content="./og-card.png" />
+    <title>Pine Bluff House — Photo Walkthrough</title>
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Interactive photo map</p>
+          <h1>Pine Bluff House</h1>
+        </div>
+        <div class="header-stats" aria-label="Walkthrough contents">
+          <span><strong>49</strong> interior views</span>
+          <span><strong>32</strong> property details</span>
+        </div>
+      </header>
+
+      <section class="intro">
+        <p>Choose a room, then select a numbered camera marker to see the view from that position.</p>
+        <span><b>Orientation</b> Front / Calloway Hill Drive is at the top</span>
+      </section>
+
+      <nav id="room-nav" class="room-nav" aria-label="Choose a room"></nav>
+
+      <section class="walkthrough" aria-label="Interactive house walkthrough">
+        <div class="plan-card">
+          <div class="card-heading">
+            <div>
+              <p class="eyebrow">Camera map</p>
+              <h2 id="room-title">Living room</h2>
+            </div>
+            <p id="room-count"></p>
+          </div>
+          <div id="plan-frame" class="plan-frame">
+            <img class="floor-plan" src="./house/floor-plan.jpg" alt="Measured floor plan of the Pine Bluff house" />
+          </div>
+          <p class="plan-note"><span></span> Arrow shows the direction the camera is facing.</p>
+        </div>
+
+        <aside class="viewer-card">
+          <div class="viewer-copy">
+            <div>
+              <p id="view-count" class="eyebrow"></p>
+              <h2 id="view-position"></h2>
+              <p id="view-facing"></p>
+            </div>
+            <div class="viewer-controls">
+              <button id="previous-view" aria-label="Previous view">←</button>
+              <button id="next-view" aria-label="Next view">→</button>
+            </div>
+          </div>
+          <button id="hero-photo" class="hero-photo" aria-label="Open this photograph full screen">
+            <img id="hero-image" alt="" />
+            <span>Expand photo ↗</span>
+          </button>
+          <div id="thumbnail-strip" class="thumbnail-strip"></div>
+          <div class="viewer-footer">
+            <span id="marker-number"></span>
+            <span id="room-badge" class="room-badge"></span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="property-section" aria-labelledby="property-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Beyond the rooms</p>
+            <h2 id="property-heading">Property reference albums</h2>
+          </div>
+          <p>Exterior, structure, and utility documentation from the tour.</p>
+        </div>
+        <div id="album-grid" class="album-grid"></div>
+      </section>
+
+      <footer>
+        <p>Photo positions and directions were reconstructed from the measured plan and overlapping room views.</p>
+        <span>Planning reference · not a survey or architectural drawing</span>
+      </footer>
+
+      <div id="photo-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Expanded room photograph" hidden>
+        <button class="close-button" aria-label="Close expanded photograph">×</button>
+        <img alt="" />
+        <p></p>
+      </div>
+
+      <div id="album-lightbox" class="lightbox album-lightbox" role="dialog" aria-modal="true" aria-label="Property album" hidden>
+        <button class="close-button" aria-label="Close album">×</button>
+        <button class="lightbox-step previous" aria-label="Previous photograph">←</button>
+        <img alt="" />
+        <button class="lightbox-step next" aria-label="Next photograph">→</button>
+        <p></p>
+      </div>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
