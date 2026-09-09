@@ -14,7 +14,7 @@ The map is a planning reference based on the supplied floor plan and overlapping
 
 ## Public walkthrough
 
-The shareable GitHub Pages version is published at <https://wtrak.github.io/pinebluffhouse/>.
+The shareable GitHub Pages version is published at <https://wtrak.github.io/pinebluffhouse-pages/>.
 
 ## Run locally
 
